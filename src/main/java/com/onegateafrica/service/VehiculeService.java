@@ -220,7 +220,9 @@ public class VehiculeService {
     Date date = new Timestamp(System.currentTimeMillis());
 
     notifications.stream().forEach(e->
+
         { //System.out.println(e.getVehicule().getDateFinDemande().before(date));
+          System.out.println(e.getDateCreation());
           if(e.getDateFinDemande().before(date) ){
             e.getVehicule().setNbrVehicule(e.getVehicule().getNbrVehicule()+1);
 
