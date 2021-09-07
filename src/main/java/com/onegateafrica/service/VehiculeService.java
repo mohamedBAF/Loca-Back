@@ -164,6 +164,7 @@ public class VehiculeService {
 
     public ResponseEntity<Vehicule> updateVehiculeDates(long id,Date dateDebutDemande,Date dateFinDemande, Vehicule vehicule) {
       if (vehicule == null) {
+        System.out.println(id);
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
       }
       Optional<Vehicule> optionalVehicule= vehiculeRepository.findById(id);
