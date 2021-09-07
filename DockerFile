@@ -1,0 +1,4 @@
+From openjdk:11
+ADD target/loca-0.0.1-SNAPSHOT.jar loca-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","loca-0.0.1-SNAPSHOT.jar"]
